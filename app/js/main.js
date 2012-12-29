@@ -1,6 +1,8 @@
 requirejs.config({
   baseUrl: 'js',
-  paths: {},
+  paths: {
+    text: 'lib/text'
+  },
   shim: {
     'lib/jquery.min': {
       exports: '$'

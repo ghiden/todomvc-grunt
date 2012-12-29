@@ -1,8 +1,9 @@
-define(['routers/router', 'config'], function(Router, config) {
+define(['text!templates/item.html', 'routers/router', 'config'],
+  function(template, Router, config) {
   var TodoView = Backbone.View.extend({
     tagName: 'li',
 
-    template: _.template($('#item-template').html()),
+    template: _.template(template),
 
     events: {
       'click .toggle': 'toggleCompleted',

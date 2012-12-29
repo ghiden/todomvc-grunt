@@ -1,10 +1,10 @@
-define(['collections/todos', 'views/todo', 'routers/router', 'config'],
-  function(Todos, TodoView, Router, config) {
+define(['text!templates/stats.html', 'collections/todos', 'views/todo', 'routers/router', 'config'],
+  function(template, Todos, TodoView, Router, config) {
 
   var AppView = Backbone.View.extend({
     el: '#todoapp',
 
-    statsTemplate: _.template($('#stats-template').html()),
+    statsTemplate: _.template(template),
 
     events: {
       'keypress #new-todo': 'createOnEnter',
