@@ -5,5 +5,9 @@
   "dependencies": {
     "requirejs": "latest",
     "connect": "2.7.0"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-requirejs": "latest"
   }
 }
