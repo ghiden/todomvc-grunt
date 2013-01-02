@@ -1,25 +1,29 @@
 requirejs.config({
   baseUrl: 'js',
   paths: {
-    text: 'lib/text'
+    text: 'lib/text',
+    jquery: 'lib/jquery.min',
+    underscore: 'lib/underscore-min',
+    backbone: 'lib/backbone-min',
+    backboneLocalstorage: 'lib/backbone-localstorage'
   },
   shim: {
-    'lib/jquery.min': {
+    jquery: {
       exports: '$'
     },
-    'lib/underscore-min': {
+    underscore: {
       exports: '_'
     },
-    'lib/backbone-min': {
-      deps: ['lib/underscore-min'],
+    backbone: {
+      deps: ['underscore'],
       exports: 'Backbone'
     },
-    'lib/backbone-localstorage': {
-      deps: ['lib/backbone-min'],
+    backboneLocalstorage: {
+      deps: ['backbone'],
       exports: 'Backbone.LocalStorage'
     },
     'app': {
-      deps: ['lib/jquery.min', 'lib/underscore-min', 'lib/backbone-min','lib/backbone-localstorage']
+      deps: ['jquery', 'underscore', 'backbone', 'backboneLocalstorage']
     }
   }
 });
