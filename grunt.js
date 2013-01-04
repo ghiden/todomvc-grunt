@@ -23,13 +23,7 @@ module.exports = function(grunt) {
               deps: ['underscore'],
               exports: 'Backbone'
             },
-            backboneLocalstorage: {
-              deps: ['backbone'],
-              exports: 'Backbone.LocalStorage'
-            },
-            'app': {
-              deps: ['jquery', 'underscore', 'backbone', 'backboneLocalstorage']
-            }
+            backboneLocalstorage: ['backbone']
           },
           dir: 'build/',
           modules: [

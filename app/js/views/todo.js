@@ -1,5 +1,5 @@
-define(['text!templates/item.html', 'routers/router', 'config'],
-  function(template, Router, config) {
+define(['jquery', 'underscore', 'backbone', 'text!templates/item.html', 'routers/router', 'config'],
+  function($, _, Backbone, template, Router, config) {
   var TodoView = Backbone.View.extend({
     tagName: 'li',
 

@@ -1,5 +1,5 @@
-define(['text!templates/stats.html', 'collections/todos', 'views/todo', 'routers/router', 'config'],
-  function(template, Todos, TodoView, Router, config) {
+define(['jquery', 'underscore', 'backbone', 'text!templates/stats.html', 'collections/todos', 'views/todo', 'routers/router', 'config'],
+  function($, _, Backbone, template, Todos, TodoView, Router, config) {
 
   var AppView = Backbone.View.extend({
     el: '#todoapp',

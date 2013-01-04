@@ -1,4 +1,4 @@
-define(['collections/todos'], function(Todos) {
+define(['backbone', 'collections/todos'], function(Backbone, Todos) {
   var router, Workspace = Backbone.Router.extend({
     routes: {
       '*filter': 'setFilter'

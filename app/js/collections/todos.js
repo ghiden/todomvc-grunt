@@ -1,4 +1,4 @@
-define(['models/todo'], function(Todo) {
+define(['models/todo', 'backbone', 'backboneLocalstorage'], function(Todo, Backbone) {
   var TodoList = Backbone.Collection.extend({
     model: Todo,
 
