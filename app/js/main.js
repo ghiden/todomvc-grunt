@@ -22,6 +22,7 @@ requirejs.config({
   }
 });
 
-require(['app'], function(App) {
+require(['views/app'], function(AppView) {
   console.log('starting App');
-})
+  window.Todo = new AppView();
+});
